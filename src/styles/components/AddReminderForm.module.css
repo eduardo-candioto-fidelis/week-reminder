@@ -1,0 +1,91 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background: rgba(196, 196, 196, 0.03);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: var(--black);
+  border-radius: 10px;
+
+  width: 660px;
+  height: 500px;
+  padding: 10px;
+
+  display: grid;
+  grid-template-columns: 19fr 1fr;
+  grid-template-rows: 5fr 90fr 5fr;
+  grid-template-areas: "name close"
+                       "week week"
+                       ". ok";
+}
+
+.container .input input {
+  grid-area: name;
+
+  width: 375px;
+  background: none;
+  border: none;
+
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.container .input div {
+  grid-area: name;    
+  
+  width: 375px;
+  height: 1px;
+
+  background: var(--text-color);
+}
+
+.container img:first-child {
+  grid-area: close;
+}
+
+.container .week {
+  grid-area: week;
+}
+
+.container img:last-child {
+  grid-area: ok;
+}
+
+.container img {
+  cursor: pointer;
+}
+.container img:hover {
+  opacity: 0.40;
+}
+
+.week {
+  margin-top: 30px;
+}
+
+.week div {
+  display: inline-block;
+  width: 14%;
+}
+
+.week div img {
+  width: 25px;
+  opacity: 0.8;
+}
+
+.week div * {
+  display: block;
+
+  margin: auto;
+  margin-bottom: 15px;
+}

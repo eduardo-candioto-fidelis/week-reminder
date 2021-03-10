@@ -1,0 +1,10 @@
+.addReminderButton {
+  grid-area: botton;
+  transform: translateX(-100%);
+  cursor: pointer;
+}
+
+.addReminderButton:hover {
+  opacity: 0.85;
+}
+
